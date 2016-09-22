@@ -1,0 +1,22 @@
+<%= form_for(att) do |f| %>
+  <% if att.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(att.errors.count, "error") %> prohibited this att from being saved:</h2>
+
+      <ul>
+      <% att.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :attendance %>
+    <%= f.text_field :attendance %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

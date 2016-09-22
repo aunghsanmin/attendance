@@ -1,0 +1,2 @@
+class Att < ApplicationRecord
+end

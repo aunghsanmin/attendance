@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Atts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attendance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atts.each do |att| %>
+      <tr>
+        <td><%= att.attendance %></td>
+        <td><%= link_to 'Show', att %></td>
+        <td><%= link_to 'Edit', edit_att_path(att) %></td>
+        <td><%= link_to 'Destroy', att, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Att', new_att_path %>
